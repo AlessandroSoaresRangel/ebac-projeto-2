@@ -13,6 +13,19 @@ public class Cliente implements Persistente {
     private Integer numero;
     private Long tel;
 
+    public Cliente(Long cpf,
+                   String nome, String cidade, String estado,
+                   String end, Integer numero, Long tel) {
+
+        this.cpf = cpf;
+        this.nome = nome;
+        this.cidade = cidade;
+        this.estado = estado;
+        this.end = end;
+        this.numero = numero;
+        this.tel = tel;
+    }
+
     public void setCpf(long cpf) {
         this.cpf = cpf;
     }

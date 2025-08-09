@@ -21,14 +21,8 @@ public class ClienteDaoTest {
 
     @Before
     public void init() throws TipoChaveNaoEncontradaException {
-        this.cliente = new Cliente();
-        cliente.setCpf(12345678910L);
-        cliente.setNome("Alessandro");
-        cliente.setCidade("Rio de Janeiro");
-        cliente.setEstado("RJ");
-        cliente.setEnd("end");
-        cliente.setNumero(10);
-        cliente.setTel(21943345445L);
+        this.cliente = new Cliente(12345678910L, "Alessandro",
+                "Rio de Janeiro", "RJ", "end", 10, 21943345445L);
 
         this.dao.cadastrar(cliente);
 

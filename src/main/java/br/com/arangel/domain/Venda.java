@@ -4,6 +4,7 @@ import main.java.br.com.arangel.annotation.TipoChave;
 
 import java.math.BigDecimal;
 import java.time.Instant;
+import java.util.HashSet;
 import java.util.Optional;
 import java.util.Set;
 
@@ -25,6 +26,15 @@ public class Venda implements Persistente {
     private Instant dataVenda;
 
     private Status status;
+
+    public Venda(String codigo, Cliente cliente,
+                 Instant dataVenda, Status status) {
+        this.codigo = codigo;
+        this.cliente = cliente;
+        this.produtos = new HashSet<>();
+        this.dataVenda = dataVenda;
+        this.status = status;
+    }
 
     public String getCodigo() {
         return codigo;
